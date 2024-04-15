@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary and Background Colors -->
+    <color name="primary_color">#4A90E2</color> <!-- A soft blue, simple and clean -->
+    <color name="background_color">#FAFAFA</color> <!-- Very light grey, almost white, clean and unobtrusive -->
+
+    <!-- Text Colors -->
+    <color name="text_color">#212121</color> <!-- Almost black, excellent for readability -->
+    <color name="secondary_text_color">#737373</color> <!-- Medium grey, less prominent -->
+
+    <!-- Accent Color -->
+    <color name="accent_color">#FFC107</color> <!-- A vibrant amber for highlighting important elements -->
+
+    <!-- Divider Color -->
+    <color name="divider_color">#BDBDBD</color> <!-- Light grey used for dividers in layouts -->
+</resources>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.AddFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:radius="10dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="Add a new hike"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="70dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/nameHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Name:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.498"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_name_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/nameLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Location:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameHikeText"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_location_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/dateHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Date:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <Button
+                android:id="@+id/hike_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="dd/mm/yyyy"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+            <TextView
+                android:id="@+id/parkingAvailableHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Parking Available"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hike_date_text">
+
+                <RadioButton
+                    android:id="@+id/radioButtonYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/lengthHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Length (m/km):"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupParking"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_length_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:text=""
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lengthHike"
+                tools:ignore="RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/weatherHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Weather:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <Spinner
+                android:id="@+id/hike_weather_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:spinnerMode="dropdown"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/estimatedTimeHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Time Start"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <Button
+                android:id="@+id/hike_estimated_time_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select Time"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_marginBottom="10sp">
+            <TextView
+                android:id="@+id/levelHike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Difficulty level"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lengthHike"
+                tools:ignore="RtlSymmetry" />
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hike_length_text" />
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/descriptionHike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:text="Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/levelHikeSpinner"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/hike_description_text"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:gravity="top"
+            android:hint="Description about the hike ...."
+            android:inputType="textEmailAddress"
+            android:padding="10sp"
+            android:paddingStart="15dp"
+            android:textColor="@color/text_color"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/primary_color"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hike_description_text" />
+
+
+    </TableLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

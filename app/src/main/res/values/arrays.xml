@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="weather_forecast_array">
+        <item>Sunny</item>
+        <item>Cloudy</item>
+        <item>Rainy</item>
+        <item>Snowy</item>
+    </string-array>
+
+    <string-array name="difficulty_level_array">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Difficult</item>
+    </string-array>
+</resources>

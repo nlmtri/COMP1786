@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.UpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:radius="10dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Information Details"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:paddingBottom="16dp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="70dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/nameHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Name:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.498"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_name_text_update"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+            <TextView
+                android:id="@+id/nameLocationUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameHikeText"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_location_text_update"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="20sp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/dateHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Date:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <Button
+                android:id="@+id/hike_date_update_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+            <TextView
+                android:id="@+id/parkingAvailableHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Parking Available"
+                app:layout_constraintHorizontal_bias="0.498" />
+
+            <RadioGroup
+                android:id="@+id/parking_available_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radio_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/lengthHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Length (m/km):"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupParking"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/hike_length_text_update"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="15dp"
+                android:textStyle="italic"
+                android:textColor="@color/text_color"
+                android:background="@drawable/input_background"
+                android:ems="10"
+                android:inputType="text"
+                android:text=""
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lengthHike"
+                tools:ignore="RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/weatherForecastHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Weather:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupParking"
+                tools:ignore="RtlSymmetry" />
+
+            <Spinner
+                android:id="@+id/hike_weather_forecast_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/weather_forecast_array" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/estimatedTimeHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Time Start:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupParking"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:id="@+id/hike_estimated_time_update_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="20sp">
+
+            <TextView
+                android:id="@+id/levelHikeUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="Difficulty level:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lengthHike"
+                tools:ignore="RtlSymmetry" />
+
+            <Spinner
+                android:id="@+id/hike_difficulty_level_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_level_array" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/descriptionHike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:text="Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/levelHikeSpinner"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/hike_description_text_update"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/input_background"
+            android:gravity="top"
+            android:hint="Description about the hike ...."
+            android:inputType="textEmailAddress"
+            android:padding="10sp"
+            android:paddingStart="15dp"
+            android:textColor="@color/text_color"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="100dp"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:radius="10dp">
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_color"
+                android:text="Update"
+                android:textColor="@color/text_color" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:background="@color/secondary_text_color"
+                android:text="Delete"
+                android:textColor="@color/text_color" />
+
+        </LinearLayout>
+    </TableLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/return_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
